@@ -1,179 +1,156 @@
-body{
-    background-color: #D4BEE4;
-    display: grid;
-    place-items: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.body{
-    background-color: white;
-    padding: 20px;
-    width: 80%;
-}
-h2{
-    color: #52107a;
-    font-size: 25px;
-    text-shadow: 2px 2px 5px rgba(72, 71, 71, 0.8);
-}
-label{
-    color: #52107a;
-    font-size: 18px;
-    font-weight: bolder;
-    text-shadow: 2px 2px 5px rgba(72, 71, 71, 0.3);
-}
-.input{
-    border-radius: 100px;  
-    border: 1px solid #333;
-    height: 23px;
-    width: 90%;              
-    outline: none;             
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 5px;  
-}
-hr{
-    background-color:#9B7EBD;
-    height: 2px; 
-}
-button {
-    display: grid;
-    place-items: center;
-    background-color: #9B7EBD;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    border-color: #9B7EBD;
-    width: 60%; 
-    max-width: 350px; 
-    height: auto; 
-    margin: auto;
-    font-size: 25px;
-    transition: all 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="icon" href="images/logo1.jpg">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="body">
+        <form method="POST" action="">
+            <h1 style="text-align:center">URAM Information Technology</h1>
+            <h2 style="text-align:center">Event E-Form</h2>
+            <h3 style="text-align:center">PERSONAL INFORMATION</h3>
+            <label for="firstName" class="name">First Name :</label><br>
+            <input type="text" id="firstName" name="firstName" class="input" placeholder="Enter your first name" required><br><br>
 
-button:hover {
-    background-color: #7a62a8; /* Change color on hover for better UX */
-}
+            <label for="lastName" class="name">Last Name :</label><br>
+            <input type="text" id="lastName" name="lastName" class="input" placeholder="Enter your last name" required><br><br>
 
-@media (max-width: 768px) {
-    button {
-        width: 70%; /* On smaller screens, increase width */
-        font-size: 20px; /* Adjust font size for smaller screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-    }
-}
+            <label for="address" class="name">Address :</label><br>
+            <input type="text" id="address" name="address" class="input" placeholder="Enter your address" required><br><br>
 
-@media (max-width: 480px) {
-    button {
-        width: 80%; /* Further increase width for very small screens */
-        font-size: 18px; /* Make font size smaller on extra small screens */
-        padding: 6px 12px; /* Reduce padding further */
-    }
-}
+            <label for="email" class="name">Email :</label><br>
+            <input type="email" id="email" name="email" class="input" required placeholder="Enter your email"><br><br>
 
-a{
-    color: #EEA5A6;
-}
-p{
-    color: #333;
-    font-size: large;
-}
-.footer {
-    background-color: #7d569a;
-    color: white;
-    height: auto;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+            <label for="phone" class="name">Phone :</label><br>
+            <input type="tel" id="phone" name="phone" class="input" placeholder="Enter your phone number" required><br><br>
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+            <label for="birth" class="name">Birth Date :</label><br>
+            <input type="date" id="birth" name="birth" class="input" placeholder="Enter your birth date" required><br><br>
 
-.footer-section {
-    flex: 1;
-    padding: 20px;
-    min-width: 250px;
-}
+            <label for="gender" class="name">Gender :</label>
+            <input type="radio" id="male" class="input1" name="gender" value="male">Male
+            <input type="radio" id="female" class="input1" name="gender" value="female"> Female <br><br>
+            <hr>
 
-.footer-section h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    color: #FFCCEA;
-}
+            <h3 style="text-align:center">EDUCATIONAL INFORMATION</h3>
+            <label for="studentStatus" class="name">Are you a student or a graduated?</label>
+            <input type="radio" id="student" name="studentStatus" value="Student" onclick="toggleGradeInput()"> Student
+            <input type="radio" id="graduate" name="studentStatus" value="Graduate" onclick="toggleGradeInput()"> Graduated<br><br>
 
-.footer-section p,
-.footer-section ul,
-.footer-section a {
-    font-size: 1em;
-    color: white;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
+            <div id="gradeLevel" style="display:none;">
+                <label for="grade" class="name">Current Level :</label><br>
+                <input type="text" id="grade" name="grade" placeholder="Enter your current level" 
+                style="border-radius: 100px;  border: 1px solid #333;height: 23px;width: 90%;outline: none;padding: 10px;margin-bottom: 10px;margin-top: 5px;"><br><br>
+            </div>
 
-.footer-section a:hover {
-    color: #FFCCEA;
-}
+            <label for="highschool" class="name">University :</label><br>
+            <input type="text" class="input" id="highschool" name="highschool" placeholder="Enter your university"><br><br>
 
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-}
+            <label for="college" class="name">College :</label><br>
+            <input type="text" id="college" class="input" name="college" required placeholder="Enter your college name">
+            <input type="text" id="college" class="input" name="gradedeg" required placeholder="Enter your grade degree">
+            <input type="text" id="major" class="input" name="major" required placeholder="Enter your major"><br><br>
 
-.footer-section ul li {
-    margin-bottom: 10px;
-}
+            <label for="training2" class="name">Other Education or Training Courses :</label><br>
+            <input type="text" id="training2" class="input" name="training2" placeholder="Enter any other education"><br><br>
+            <hr>
 
-.contact p {
-    margin: 5px 0;
-}
+            <h3 style="text-align:center">PREVIOUS WORK EXPERIENCE</h3>
+            <label for="employmentStatus" class="name">Are you working or employed ?</label>
+            <input type="radio" id="yes" class="input1" name="employmentStatus" value="Yes" onclick="toggleAdditionalFields()">Yes
+            <input type="radio" id="no" class="input1" name="employmentStatus" value="No" onclick="toggleAdditionalFields()"> NO <br><br>
 
-.footer-bottom {
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1em;
-    margin-top: 20px;
-}
+            <div id="additionalFields" style="display: none;">
+            <label for="companyname" class="name">Company Name :</label><br>
+            <input type="text" id="companyname" class="input" name="companyname" placeholder="Enter the company name"><br><br>
 
-/* Media Query for small devices (tablets and mobile) */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; /* إضافة لضبط العناصر في المركز */
-    }
+            <label for="position" class="name">Your Position :</label><br>
+            <input type="text" id="position" class="input" name="position" placeholder="Enter your current position"><br><br>
 
-    .footer-section {
-        min-width: 100%; /* يجعل كل قسم يحتل كامل العرض */
-        padding: 15px;
-        text-align: center; /* لضبط النصوص في الوسط */
-    }
+            <label for="companyaddress" class="name">Company Address :</label><br>
+            <input type="text" id="companyaddress" class="input" name="companyaddress" placeholder="Enter your company addres"><br><br>
 
-    .footer-section h2 {
-        font-size: 1.2em;
-    }
+            <label for="date" class="name">Start Date :(Till Now)</label><br>
+            <input type="date" id="date" class="input" name="date" ></input><br><br>
+            </div>
+            <hr>
 
-    .footer-bottom {
-        font-size: 0.9em;
-    }
-}
+            <h3 style="text-align:center">ADDITIONAL INFORMATION</h3>
+            <label for="nationalId" class="name">National ID:</label><br>
+            <input type="text" id="nationalId" class="input" name="nationalId" placeholder="Enter your national ID" style="width: 70%;"><br><br>
 
-/* Media Query for smaller devices (mobile phones) */
-@media (max-width: 480px) {
-    .footer {
-        padding: 20px 0;
-    }
+            <label for="fullName" class="name">Full Name:</label><br>
+            <input type="text" id="fullName" class="input" name="fullName" placeholder="Enter your full name" style="width: 70%;"><br><br>
+            
+            <label for="img" style="text-align: center; margin-bottom: 10px;">Upload Payment Image:</label>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            
+                <input type="file" id="img" name="img" style="flex-shrink: 0; margin-left: 5px; margin-bottom: 10px;">
+            
+                <div style="display: flex; gap: 10px;">
+                    <img src="images/instapay.png" alt="InstaPay" onclick="showInstaPayNumber()" 
+                         style="cursor: pointer; width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                         
+                    <img src="images/VF Cash Red 2.jpg" alt="Vodafone Cash" onclick="showVodafoneNumber()" 
+                         style="cursor: pointer; width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                </div>
+            </div>
+            
+           <p style="text-align: center; margin-top: 10px;">Please upload a clear picture so that the application is not rejected</p>
 
-    .footer-section h2 {
-        font-size: 1em;
-    }
-
-    .footer-bottom {
-        font-size: 0.8em;
-    }
-}
+           <label>
+            <input type="checkbox" name="acceptTerms" id="acceptTerms">
+            Accept all <a href="terms.html">Terms & Conditions</a>
+            </label><br><br><br>
+            
+            <button type="submit" value="Submit" class="button">Submit & Get your Invitation</button><br><br><br>
+        </form>
+        <footer class="footer"> 
+            <div class="footer-content"> 
+                <div class="footer-section links">
+                     <h2>Contact us via :</h2> 
+                     <ul> 
+                        <li><a href="mailto:Info@uramit-eg.com" title="Contact Us">
+                            <img src="images/envelope.png" alt="Email Icon" width="20" height="20"> 
+                            Email: Info@uramit-eg.com
+                        </a></li>
+                         <li><a href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D9%8A%D8%B1%D8%A7%D9%85+%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA+-+Uram+IT%E2%80%AD/@30.7190716,31.2541385,17z/data=!3m1!4b1!4m6!3m5!1s0x14f7c126e17c5471:0x796f23f416d31754!8m2!3d30.7190716!4d31.2567134!16s%2Fg%2F11sswn2qv5?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" title="Find Us on the Map">
+                            <img src="images/marker.png" alt="Map Icon" width="20" height="20"> 
+                            Location: Egypt 
+                        </a>
+                        </li> <li> <a href="tel:01111728770" title="Call Us">
+                            <img src="images/phone-call.png" alt="Phone Icon" width="20" height="20"> 
+                             Call us:  01111728770
+                        </a></li>
+                         <li><a href="https://wa.me/+966 55 946 5654" target="_blank" title="WhatsApp Us">
+                            <img src="images/whatsapp.png" alt="WhatsApp Icon" width="20" height="20"> 
+                              WhatsApp: +966 55 946 5654
+                        </a></li> 
+                        </ul> 
+                    </div>
+                     <div class="footer-section links"> 
+                        <h2>Social Media :</h2> 
+                        <ul> 
+                            <li><a href="https://www.facebook.com/search/top?q=uramit%20eg" target="_blank" title="facebook">
+                                <img src="images/facebook.png" width="20" height="20"> 
+                                  Facebook</a></li> 
+                            <li><a href="https://www.instagram.com/uramit_eg/" target="_blank" title="facebook">
+                                <img src="images/instagram.png" width="20" height="20"> 
+                                 Instagram</a></li> 
+                            <li><a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A67919228&keywords=uram%20it-eg&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=59d3e964-8a28-466c-82a0-8af3af5e383b&sid=0V3&spellCorrectionEnabled=true" target="_blank" title="facebook">
+                                <img src="images/linkedin.png" width="20" height="20"> 
+                                  LinkedIn</a></li>
+                         </ul> 
+                        </div></div>
+                        <div class="footer-bottom"> &copy; 2024 Uram Information Technology. All Rights Reserved.</div>
+        </footer>
+        </div>
+          
+     
+    <script src="app.js"></script>
+</body>
+</html>
