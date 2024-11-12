@@ -140,7 +140,10 @@ p{
     font-size: 1em;
     margin-top: 20px;
 }
-
+footer img{
+    width: 20px;
+    height: auto;
+}
 /* Media Query for small devices (tablets and mobile) */
 @media (max-width: 768px) {
     .footer-content {
