@@ -10,7 +10,9 @@
 <body>
     <div class="body">
         <form method="POST" action="">
-            <h2 style="text-align:center">SELF INFORMATION</h2>
+            <h1 style="text-align:center">URAM Information Technology</h1>
+            <h2 style="text-align:center">Event E-Form</h2>
+            <h3 style="text-align:center">PERSONAL INFORMATION</h3>
             <label for="firstName" class="name">First Name :</label><br>
             <input type="text" id="firstName" name="firstName" class="input" placeholder="Enter your first name" required><br><br>
 
@@ -34,7 +36,7 @@
             <input type="radio" id="female" class="input1" name="gender" value="female"> Female <br><br>
             <hr>
 
-            <h2 style="text-align:center">STUDY INFORMATION</h2>
+            <h3 style="text-align:center">EDUCATIONAL INFORMATION</h3>
             <label for="studentStatus" class="name">Are you a student or a graduated?</label>
             <input type="radio" id="student" name="studentStatus" value="Student" onclick="toggleGradeInput()"> Student
             <input type="radio" id="graduate" name="studentStatus" value="Graduate" onclick="toggleGradeInput()"> Graduated<br><br>
@@ -57,7 +59,7 @@
             <input type="text" id="training2" class="input" name="training2" placeholder="Enter any other education"><br><br>
             <hr>
 
-            <h2 style="text-align:center">PREVIOUS WORK EXPERIENCE</h2>
+            <h3 style="text-align:center">PREVIOUS WORK EXPERIENCE</h3>
             <label for="employmentStatus" class="name">Are you working or employed ?</label>
             <input type="radio" id="yes" class="input1" name="employmentStatus" value="Yes" onclick="toggleAdditionalFields()">Yes
             <input type="radio" id="no" class="input1" name="employmentStatus" value="No" onclick="toggleAdditionalFields()"> NO <br><br>
@@ -77,23 +79,27 @@
             </div>
             <hr>
 
-            <h2 style="text-align:center">ADDITIONAL INFORMATION</h2>
+            <h3 style="text-align:center">ADDITIONAL INFORMATION</h3>
             <label for="nationalId" class="name">National ID:</label><br>
             <input type="text" id="nationalId" class="input" name="nationalId" placeholder="Enter your national ID" style="width: 70%;"><br><br>
 
             <label for="fullName" class="name">Full Name:</label><br>
             <input type="text" id="fullName" class="input" name="fullName" placeholder="Enter your full name" style="width: 70%;"><br><br>
             
-            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
-            <label for="img" style="flex-basis: 100%; text-align: center; margin-bottom: 10px;">Upload Payment Image:</label>
-    
-    
-           <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
-           <input type="file" id="img" name="img" style="margin-left: 10px; flex-basis: 100%; margin-bottom: 10px;">
-           <img src="images/instapay.png" alt="InstaPay" onclick="showInstaPayNumber()" style="cursor: pointer; width: 30%; max-width: 100px; height: auto;">
-           <img src="images/vodafone.png" alt="Vodafone Cash" onclick="showVodafoneNumber()" style="cursor: pointer; width: 30%; max-width: 100px; height: auto;">
-           </div>
-           </div>
+            <label for="img" style="text-align: center; margin-bottom: 10px;">Upload Payment Image:</label>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            
+                <input type="file" id="img" name="img" style="flex-shrink: 0; margin-left: 5px; margin-bottom: 10px;">
+            
+                <div style="display: flex; gap: 10px;">
+                    <img src="images/instapay.png" alt="InstaPay" onclick="showInstaPayNumber()" 
+                         style="cursor: pointer; width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                         
+                    <img src="images/VF Cash Red 2.jpg" alt="Vodafone Cash" onclick="showVodafoneNumber()" 
+                         style="cursor: pointer; width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                </div>
+            </div>
+            
            <p style="text-align: center; margin-top: 10px;">Please upload a clear picture so that the application is not rejected</p>
 
            <label>
